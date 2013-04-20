@@ -174,14 +174,12 @@ Notice how we pass the Class object, not an instance of the object, to the metho
 Anything else I should know?
 Yea. Avoid using these method names in a class:
 
-__new__
-__alloc__
+__new__, __alloc__
 
 They are reserved for use in the classes library for instantiating objects.
 Also, I wouldn't try changing these variables of an object/class value:
 
-__super__
-__class__
+__super__, __class__
 
 As you know super is a reference to the supertype, i.e. if mio is an instance of Cat, then `mio.super` is an instance of Animal, which gives the object the ability to call super methods, as seen before.
 The class variable is a reference to the class object, i.e. `mio.class == Cat`
